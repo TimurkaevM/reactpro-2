@@ -1,13 +1,81 @@
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.container {
+  width: 1250px;
+  margin: auto;
+}
+
+.header {
+  font-size: 2.5em;
+  color: blueviolet;
+  text-align: center;
+  border-bottom: 2px solid blueviolet;
+  margin-bottom: 30px;
+}
+.photos {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.photo {
+  margin-bottom: 50px;
+  border-bottom: 1px solid blueviolet;
+  box-sizing: border-box;
+}
+.photo__title {
+  text-align: center;
+  font-size: 1em;
+  padding: 10px 0;
+}
+.photo__item {
+  position: relative;
+  transition: .2s linear;
+}
+.photo__item:hover .photo__btn {
+  visibility: visible;
+}
+.photo__btn {
+  width: 100px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  display: flex;
+  background-color: #000000;
+  visibility: hidden;
+  transition: .2s linear;
+}
+.checkbox {
+  width: 50%;
+  cursor: pointer;
+  border: none;
+  border-left: 1px solid #ffffff;
+  background-color: inherit;
+  color: gold;
+  font-size: 1rem;
+  transition: .2s;
+}
+.checkbox:hover {
+  color: crimson;
+}
+.btn {
+  width: 50%;
+  cursor: pointer;
+  border: none;
+  background-color: inherit;
+  color: gold;
+  transition: .2s;
+  font-size: 1rem;
+}
+.btn:hover {
+  color: chartreuse;
+}
+.favorite {
+ color: chartreuse;
+}
+.favorite__title {
+  font-size: 1.5rem;
+  color: forestgreen;
 }
